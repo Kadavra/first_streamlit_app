@@ -34,8 +34,10 @@ try:
   else:
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice )
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+    
 except URLError as e:
-streamlit.error()
+  streamlit.error()
+
  # streamlit.write('The user entered ', fruit_choice)
 
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice )
